@@ -45,12 +45,13 @@ def save_diary():
     profilname = f'static/img/profil-{mytime}.{extension}'
     profil.save(profilname)
 
-    
+    time = today.strftime('%Y.%m.%d')
     doc = {
         'file': filename,
         'profil': profilname,
         'title': title_receive,
-        'content':content_receive
+        'content':content_receive,
+        'time': time
     }
     db.diary.insert_one(doc)
     

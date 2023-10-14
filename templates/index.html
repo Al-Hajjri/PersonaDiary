@@ -44,6 +44,7 @@
               let title = articles[i]["title"];
               let content = articles[i]["content"];
               let file = articles[i]['file']
+              let time = articles[i]['time']
               let profil = articles[i]['profil']
               let temp_html=`  <div class="col">
                           <div class="card">
@@ -52,6 +53,7 @@
                               <img src="../${profil}" style="width:80px"  class="rounded-circle" alt="...">
                               <h5 class="card-title">${title}</h5>
                               <p class="card-text">${content}</p>
+                              <h6 class="card-title">${time}</h6>
                             </div>
                           </div>
                         </div>`
